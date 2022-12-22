@@ -39,7 +39,7 @@ const App =()=>{
 
   useEffect(()=>{
     setInitialData()
-  },[maxSeatsInARow, maximumNoOfRow, setInitialData])
+  },[maxSeatsInARow, maximumNoOfRow])
 
    const getTotalSeatsLeft = () => {
     let seatsLeftCount = 0;

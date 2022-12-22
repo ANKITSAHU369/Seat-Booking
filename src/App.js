@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 const App =()=>{
 
   const [value, setValue] = useState()
-  const [maxSeatsInARow, setMaxSeatsInARow] = useState(7)
-  const [maximumNoOfRow, setMaximumNoOfRow] = useState(11)
+  const maxSeatsInARow = 7
+  const maximumNoOfRow = 11
   const [seats, setSeats] = useState([])
   const [seatsInRow, setSeatsInRow] = useState([])
   const [emptyCount, setEmptyCount] = useState([])
@@ -39,7 +39,7 @@ const App =()=>{
 
   useEffect(()=>{
     setInitialData()
-  },[maxSeatsInARow, maximumNoOfRow])
+  },[maxSeatsInARow, maximumNoOfRow, setInitialData])
 
    const getTotalSeatsLeft = () => {
     let seatsLeftCount = 0;
@@ -129,7 +129,7 @@ const App =()=>{
   return(
     <div style={{display:"flex",justifyContent:"center"}}>
       <div>
-        <h1>Seat-Booking <img alt="Seat-image" src='https://www.pngkit.com/png/full/301-3016415_flight-of-stairs-icons-download-for-free-at.png' width={"40px"} height={"40px"}/> </h1>
+        <h1>Seat-Booking <img alt="Seat" src='https://www.pngkit.com/png/full/301-3016415_flight-of-stairs-icons-download-for-free-at.png' width={"40px"} height={"40px"}/> </h1>
         <input value={value} type='text' placeholder='Enter Number' onChange={(e) => setValue(e.target.value)} />
         <button className='bookButton'  onClick={() => handleBookSeats()}>Book</button>
         <div style={{ display: 'flex', flexDirection: 'column' }}>

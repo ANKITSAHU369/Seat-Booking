@@ -4,8 +4,13 @@ import React, { useEffect, useState } from "react";
 const App =()=>{
 
   const [value, setValue] = useState()
+<<<<<<< HEAD
   const [maxSeatsInARow, setMaxSeatsInARow] = useState(7)
   const [maximumNoOfRow, setMaximumNoOfRow] = useState(11)
+=======
+  const maxSeatsInARow = 7
+  const maximumNoOfRow = 11
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
   const [seats, setSeats] = useState([])
   const [seatsInRow, setSeatsInRow] = useState([])
   const [emptyCount, setEmptyCount] = useState([])
@@ -21,7 +26,11 @@ const App =()=>{
     }
     // Initializing Last Row (To make seat count 83)
     tempSeats[tempSeats?.length] = []
+<<<<<<< HEAD
     for(let seat = 0; seat < 3; seat++){
+=======
+    for(let row = 0; row < 3; row++){
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
       tempSeats[tempSeats?.length-1].push(false)
     }
     setSeats(tempSeats)
@@ -33,7 +42,10 @@ const App =()=>{
     }
     // Last Row
     tempEmptySeats.push(3)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
     setEmptyCount(tempEmptySeats)
     setSeatsInRow(tempEmptySeats)
   }
@@ -50,7 +62,11 @@ const App =()=>{
 
   const bookSeatsInSameRow = (value) => {
     let isSeatBookedInSameRow = false;
+<<<<<<< HEAD
     for (let row = 0; row < seats?.length ; row++) { 
+=======
+    for (let row = 0; row < seats?.length; row++) {
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
       if (emptyCount[row] >= value) {
         isSeatBookedInSameRow = true;
         let seatsLeftToBook = value;
@@ -83,7 +99,10 @@ const App =()=>{
           if (!tempSeats[row][seat]) {
             tempSeats[row][seat] = true;
             seatsLeftToBook--
+<<<<<<< HEAD
             
+=======
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
             tempEmptyCount[row]--;
           }
           if (!seatsLeftToBook) break
@@ -129,6 +148,7 @@ const App =()=>{
   }
 
   return(
+<<<<<<< HEAD
     
     <div style={{display:"flex",justifyContent:"center"}}>
         
@@ -137,6 +157,13 @@ const App =()=>{
         <input value={value} type='text' placeholder='Enter Number' onChange={(e) => setValue(e.target.value)} />
         <button className='bookButton'  onClick={() => handleBookSeats()}>Book</button>
 
+=======
+    <div style={{display:"flex",justifyContent:"center"}}>
+      <div>
+        <h1>Seat-Booking <img alt="Seat" src='https://www.pngkit.com/png/full/301-3016415_flight-of-stairs-icons-download-for-free-at.png' width={"40px"} height={"40px"}/> </h1>
+        <input value={value} type='text' placeholder='Enter Number' onChange={(e) => setValue(e.target.value)} />
+        <button className='bookButton'  onClick={() => handleBookSeats()}>Book</button>
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {
             seats?.map((i, index_i) =>
@@ -149,9 +176,13 @@ const App =()=>{
           }
         </div>
       </div>
+<<<<<<< HEAD
       <button onClick={()=>setInitialData()} className="resetButton"> RESET </button>
   </div>
   
+=======
+  </div>
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
   )
 }
 export default App;

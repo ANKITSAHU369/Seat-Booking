@@ -5,9 +5,99 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* 1 */
+  background-image: url("../src/seatbookingbackground.png");
+  background-size: cover;
+  /* 1 */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  color: white;
+  font-size: 40px;
+  letter-spacing: 3px;
+  background-color: #d1b0f8;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 7px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0,0.3);
+  text-align: center;
+  text-shadow: 2px 0.5px 9px brown;
+}
+
+
+input{
+  text-align: center;
+  height: 30px;
+  top: 10px;
+  margin-left: 10px;
+  border: none;
+  background: transparent;
+  font-size:20px ;
+  font-weight: 500;
+  width: 50%;
+  border-bottom: 2px solid #d1b0f8;
+  outline: none;
+}
+.bookButton{
+  min-height: 40px;
+  width: auto;
+  padding-left: 88px;
+  padding-right: 88px;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: #d1b0f8;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+.bookButton:hover{
+  color: black;
+<<<<<<< HEAD
+  background-color: goldenrod;
+=======
+  background-color: blanchedalmond;
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867
+  cursor: pointer;
+  
+}
+.mainDiv{
+}
+.seatStyle{
+border-radius: 6px;
+box-shadow: 2px 2px 0.8px ;
+width: 60px;
+height: 20px;
+margin: 10px;
+text-align: center;
+}
+<<<<<<< HEAD
+.resetButton{
+  min-height: 40px;
+  width:auto;
+  /* padding-left: 88px;
+  padding-right: 88px; */
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: #d1b0f8;
+  color: #fff;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  margin: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
+}
+.resetButton:hover{
+  color:whitesmoke;
+  background-color:lightcoral;
+  cursor: pointer;
+}
+=======
+>>>>>>> 2480b7dadf335e96fe8816aa40566f08ca2ed867

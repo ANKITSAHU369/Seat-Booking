@@ -5,8 +5,10 @@ const App =()=>{
 
   const [value, setValue] = useState()
 
-  const [maxSeatsInARow, setMaxSeatsInARow] = useState(7)
-  const [maximumNoOfRow, setMaximumNoOfRow] = useState(11)
+  // const [maxSeatsInARow, setMaxSeatsInARow] = useState(7)
+  // const [maximumNoOfRow, setMaximumNoOfRow] = useState(11)
+  const maxSeatsInARow = 7
+  const maximumNoOfRow = 11
 
 
   const [seats, setSeats] = useState([])
@@ -42,7 +44,7 @@ const App =()=>{
 
   useEffect(()=>{
     setInitialData()
-  },[maxSeatsInARow, maximumNoOfRow])
+  },[maxSeatsInARow, maximumNoOfRow, setInitialData])
 
    const getTotalSeatsLeft = () => {
     let seatsLeftCount = 0;
